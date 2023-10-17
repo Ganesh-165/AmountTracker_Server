@@ -1,5 +1,5 @@
 
 exports.corsOptions = {
-    origin:'http://localhost:3000',
+    origin:'https://amounttracker-client.onrender.com',
     optionsSuccessstatus:200
 } 
