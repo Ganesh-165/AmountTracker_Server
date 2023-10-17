@@ -33,6 +33,7 @@ exports.postLoginData = async (req, res, next) => {
           { $set: { refreshToken: refreshToken } }
         );
         res.cookie("jwt", refreshToken, {
+          domain:'https://amounttracker-client.onrender.com',
           httpOnly: false,
           maxAge: 24*3600*1
         });
