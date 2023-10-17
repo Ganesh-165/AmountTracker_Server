@@ -1,5 +1,6 @@
 
 exports.corsOptions = {
-    origin:'https://amounttracker-client.onrender.com',
+    origin: true, 
+    credentials: true,
     optionsSuccessstatus:200
 } 
