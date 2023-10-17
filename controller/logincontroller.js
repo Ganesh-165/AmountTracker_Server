@@ -34,6 +34,7 @@ exports.postLoginData = async (req, res, next) => {
         );
         res.cookie("jwt", refreshToken, {
           httpOnly: true,
+          expires: 24 * 60*60*1000
         });
         console.log(res.cookie.jwt);
         return res.json({
