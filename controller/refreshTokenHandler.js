@@ -4,6 +4,7 @@ const registercollection = require("../models/registermodel");
 exports.refTokenHandler = async (req, res, next) => {
   try {
     const cookie = req.cookies;
+    console.log(cookie);
     if (!cookie.jwt) return res.sendStatus(401);
     const refreshToken = cookie.jwt;
     const foundUser = await registercollection.findOne({
