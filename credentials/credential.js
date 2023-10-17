@@ -1,4 +1,4 @@
-const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = ['https://amounttracker-client.onrender.com'];
 
 exports.credentials = (req, res, next) => {
     const origin = req.headers.origin;
