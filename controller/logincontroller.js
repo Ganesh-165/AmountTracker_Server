@@ -35,7 +35,7 @@ exports.postLoginData = async (req, res, next) => {
         res.cookie("jwt", refreshToken, {
           httpOnly: true,
         });
-        console.log(res.cookie);
+        console.log(res.cookie.jwt);
         return res.json({
           accessToken,
           email,
