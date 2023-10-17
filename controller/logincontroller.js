@@ -34,9 +34,8 @@ exports.postLoginData = async (req, res, next) => {
         );
         res.cookie("jwt", refreshToken, {
           httpOnly: true,
-          secure: false
+          maxAge: 24*3600*1
         });
-        console.log(res.cookie.jwt);
         return res.json({
           accessToken,
           email,
