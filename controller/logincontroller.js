@@ -33,7 +33,7 @@ exports.postLoginData = async (req, res, next) => {
           { $set: { refreshToken: refreshToken } }
         );
         res.cookie("jwt", refreshToken, {
-          httpOnly: true,
+          httpOnly: false,
           maxAge: 24*3600*1
         });
         return res.json({
