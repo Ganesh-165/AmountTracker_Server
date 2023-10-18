@@ -38,7 +38,7 @@ exports.postLoginData = async (req, res, next) => {
           httpOnly: true, // Not accessible by JavaScript
           sameSite: 'Lax', // Controls when the cookie is sent
           maxAge: 24 * 60 * 60 * 1000, // Expires in 1 hour
-          domain: 'amounttracker-server.onrender.com', // Replace with your domain
+          domain: 'amounttracker-client.onrender.com', // Replace with your domain
           path: '/', // Cookie is available for the entire domain
        })
         return res.json({
